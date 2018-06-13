@@ -1,0 +1,20 @@
+/**
+ * Arke TinyMCE CSS
+ *
+ * @package     arke
+ * @copyright   Copyright (c) 2018, Danny Cooper
+ * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
+*/
+
+body {
+	color: #2f2f2f;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.7;
+	max-width: 640px
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: black;
+		line-height: 1.25
+}
