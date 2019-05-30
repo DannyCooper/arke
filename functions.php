@@ -38,21 +38,26 @@ if ( ! function_exists( 'arke_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary Menu', 'arke' ),
-		) );
+		register_nav_menus(
+			array(
+				'menu-1' => esc_html__( 'Primary Menu', 'arke' ),
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -67,7 +72,7 @@ add_action( 'after_setup_theme', 'arke_setup' );
 /**
  * Registers an editor stylesheet for the theme.
  */
-	add_editor_style( 'editor-style.css' );
+add_editor_style( 'editor-style.css' );
 
 
 /**
@@ -78,7 +83,7 @@ add_action( 'after_setup_theme', 'arke_setup' );
  * @global int $content_width
  */
 function arke_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'arke_content_width', 1040 );
+	$GLOBALS['content_width'] = apply_filters( 'arke_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'arke_content_width', 0 );
 
@@ -86,7 +91,7 @@ add_action( 'after_setup_theme', 'arke_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function arke_scripts() {
-	wp_enqueue_style( 'arke-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'arke-style', get_stylesheet_uri(), array(), '1.0.2' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -103,7 +108,8 @@ if ( ! function_exists( 'arke_thumbnail' ) ) :
 	 */
 	function arke_thumbnail( $size = '' ) {
 
-		if ( has_post_thumbnail() ) { ?>
+		if ( has_post_thumbnail() ) {
+			?>
 			<div class="post-thumbnail">
 
 				<?php if ( ! is_single() ) : ?>
@@ -115,7 +121,7 @@ if ( ! function_exists( 'arke_thumbnail' ) ) :
 				<?php endif; ?>
 
 			</div><!-- .post-thumbnail -->
-		<?php
+			<?php
 		}
 
 	}
@@ -155,7 +161,7 @@ $tags_list = get_the_tag_list( '', esc_html__( ', ', 'arke' ) );
  * Display the admin notice.
  */
 function arke_admin_notice() {
-	global $current_user ;
+	global $current_user;
 	$user_id = $current_user->ID;
 
 	if ( class_exists( 'Olympus_Google_Fonts' ) ) {

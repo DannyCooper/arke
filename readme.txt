@@ -2,8 +2,8 @@
 
 Contributors: DannyCooper
 Requires at least: 4.0
-Tested up to: 4.9
-Stable tag: 1.0.1
+Tested up to: 5.2
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 GitHub Theme URI: https://github.com/DannyCooper/arke
@@ -36,11 +36,15 @@ Arke includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0.2 - May 30 2019 =
+* Add divider when multiple posts are shown on homepage.
+* Fix embed widths.
+
 = 1.0.1 - May 10 2018 =
-* Add notice
+* Add notice.
 
 = 1.0.0 - May 10 2018 =
-* Initial release
+* Initial release.
 
 == Credits ==
 
