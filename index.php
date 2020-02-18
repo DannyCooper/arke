@@ -42,6 +42,8 @@ get_template_part( 'header' );
 			<footer class="site-footer">
 				<a href="<?php echo esc_url( site_url( 'archives' ) ); ?>"><?php esc_html_e( 'View All Posts &rarr;', 'arke' ); ?></a>
 			</footer><!-- .site-footer -->
+		<?php else : ?>
+			<?php arke_the_posts_navigation(); ?>
 		<?php endif; ?>
 		<?php wp_footer(); ?>
 	</body>

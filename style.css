@@ -4,7 +4,7 @@ Theme URI: https://olympusthemes.com/themes/arke/
 Author: DannyCooper
 Author URI: https://olympusthemes.com/
 Description: Arke is a truly minimal WordPress theme. No sidebars, no widgets, no settings. Just your content. Arke is extremely fast and scores 100/100 on Pingdom's speed test.
-Version: 1.0.2
+Version: 1.1.0
 License: GNU General Public License v2 or later
 Text Domain: arke
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -34,10 +34,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 # Primary Nav
 # Content
 	## Posts and Pages
-	## Content Navigation
 	## Comments
-# Sidebar
-	## Widgets
 # Footer
 # Infinite Scroll
 # Media
@@ -742,6 +739,26 @@ body {
 .blog article:last-child {
 	border-bottom: 0;
 	padding-bottom: 0;
+}
+
+.posts-navigation {
+	border-top: 1px solid #f3f3f3;
+	padding-top: 50px;
+	margin: 34px 0 50px;
+}
+
+.posts-navigation a {
+	text-decoration: none
+}
+
+.nav-previous,
+.nav-next {
+	width: 50%;
+	display: inline-block;
+}
+
+.nav-next {
+	text-align: right;
 }
 
 /*--------------------------------------------------------------

@@ -205,3 +205,15 @@ function arke_dismiss_admin_notice() {
 	}
 }
 add_action( 'admin_init', 'arke_dismiss_admin_notice' );
+
+/**
+ * Newer/Older Posts.
+ */
+function arke_the_posts_navigation() {
+	the_posts_navigation(
+		array(
+			'prev_text' => esc_html__( '&larr; Older posts', 'arke' ),
+			'next_text' => esc_html__( 'Newer posts &rarr;', 'arke' ),
+		)
+	);
+}
