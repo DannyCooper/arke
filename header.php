@@ -20,6 +20,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+		<?php wp_body_open(); ?>
 			<header class="site-header clear">
 					<div class="site-branding">
 
@@ -44,14 +45,16 @@
 					</div><!-- .site-branding -->
 					<nav id="site-navigation" class="menu-1">
 							<?php
-							wp_nav_menu( array(
-								'theme_location' => 'menu-1',
-								'menu_id'        => 'site-menu',
-								'depth'          => 1,
-								'fallback_cb'    => false,
-							) );
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'site-menu',
+									'depth'          => 1,
+									'fallback_cb'    => false,
+								)
+							);
 							?>
 					</nav><!-- .menu-1 -->
 			</header><!-- .site-header -->
 			<div class="site-content">
-					<div class="content-area">
+					<div id="content-area" class="content-area">
